@@ -3,9 +3,10 @@ package com.intelligentumbrella.android.ui.place
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import java.util.ArrayList
 import com.intelligentumbrella.android.logic.Repository
 import com.intelligentumbrella.android.logic.model.Place
-import java.util.ArrayList
+
 
 class PlaceViewModel : ViewModel() {
 
@@ -13,7 +14,7 @@ class PlaceViewModel : ViewModel() {
 
     val placeList = ArrayList<Place>()
 
-    val palceLiveData = Transformations.switchMap(searchLivedata) { query ->
+    val placeLiveData = Transformations.switchMap(searchLivedata) { query ->
         Repository.searchPlaces(query)
     }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:windowBackground">
@@ -10,8 +9,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:src=""/>
+        />
+<!--        android:src="" -->
 
+    <LinearLayout
+        android:id="@+id/actionBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
 
+        <EditText
+            android:id="@+id/searchPlaceEdit"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:hint="@string/input_city_name"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@drawable/radius_white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/autoSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/radios_primary"
+            android:text="@string/auto_search"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBarLayout"
+        android:visibility="gone"/>
 
 </RelativeLayout>

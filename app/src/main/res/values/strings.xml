@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IntelligentUmbrella</string>
+    <string name="input_city_name">请输入您所在的城市</string>
+    <string name="auto_search">自动搜索城市</string>
 </resources>
